@@ -7,20 +7,25 @@ import {v4 as uuidv4} from "uuid";
 const AddTask = () => {
 
     const [taskTitle, setTaskTitle] = useState("");
+    //const [date, setDate] = useState(new Date());
+    const [date, setDate] = useState("");
     const handleSubmit = async (e : FormEvent) => {
+
         e.preventDefault();
 
-        await addTodo({id: uuidv4(), text: taskTitle})
-
+        await addTodo({id: uuidv4(), text: taskTitle, date: date})
+        
         setTaskTitle("");
+        setDate("");
     }
   return (
-    <form className='mb-4 space-y-3' onSubmit={handleSubmit}>
-        <input 
-            type='text' 
-            onChange={(e: ChangeEvent<HTMLInputElement>) => setTaskTitle(e.target.value)}
-            value={taskTitle}
-            className='
+    <form className='m-4 space-y-10' onSubmit={handleSubmit}>
+        <div className='space-y-6'>
+            <input 
+                type='text' 
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setTaskTitle(e.target.value)}
+                value={taskTitle}
+                className='
                 w-full 
                 border 
                 px-4 
@@ -28,7 +33,25 @@ const AddTask = () => {
                 rounded-lg 
                 focus:outline-none 
                 focus:border-blue-400
-                '/>
+                '
+            />
+            <input
+                type='date'
+                onChange={(e) => setDate(new Date(e.target.value).toLocaleDateString("ja-JP"))}
+                className='
+                shadow
+                appearance-none
+                border
+                rounded
+                w-full
+                py-2
+                px-3
+                text-gray-700
+                leading-tight
+                focus:outline-none
+                '
+            />
+        </div>
         <button 
             className='
                 w-full

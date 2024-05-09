@@ -12,6 +12,7 @@ const Todo = ({todos} :TodoProps) => {
     const ref = useRef<HTMLInputElement>(null);
     const [isEditing, setIsEditing] = useState(false);
     const [editedTaskTitle, setEditedTaskTitle] = useState(todos.text);
+    const [editedDate, setEditedDate] = useState(todos.date);
 
     useEffect(() => {
         if(isEditing) {
@@ -44,24 +45,47 @@ const Todo = ({todos} :TodoProps) => {
             shadow
             '>
                 {isEditing ? (
-                    <input
-                        ref={ref}
-                        type='text'
-                        className='
-                        mr-2
-                        py-1
-                        px-2
-                        rounded
-                        border-gray-400
-                        border
-                        '
-                        value={editedTaskTitle}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => 
-                            setEditedTaskTitle(e.target.value)
-                        }
-                    />
+                    <div className='space-y-6'>
+                        <input
+                            ref={ref}
+                            type='text'
+                            className='
+                            mr-2
+                            py-1
+                            px-2
+                            rounded
+                            border-gray-400
+                            border
+                            '
+                            value={editedTaskTitle}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => 
+                                setEditedTaskTitle(e.target.value)
+                            }
+                        />
+                        <input
+                            ref={ref}
+                            type='date'
+                            onChange={(e) => setEditedDate(new Date(e.target.value).toLocaleDateString("ja-JP"))}
+                            className='
+                            shadow
+                            appearance-none
+                            border
+                            rounded
+                            w-full
+                            py-2
+                            px-3
+                            text-gray-700
+                            leading-tight
+                            focus:outline-none
+                            '
+                            value={editedDate}
+                        />
+                    </div>
                 ) : (
-                    <span>{todos.text}</span>
+                    <div className='space-y-3'>
+                        <div>{todos.text}</div>
+                        <div>{todos.date}</div>
+                    </div>
                 )}
                 <div>
                     {isEditing ? (
