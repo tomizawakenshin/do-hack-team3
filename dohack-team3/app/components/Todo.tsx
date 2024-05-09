@@ -5,14 +5,14 @@ import { Task } from '../types';
 import { deleteTodo, editTodo } from '../api';
 
 interface TodoProps {
-    todos: Task;
+    todo: Task;
 }
 
-const Todo = ({todos} :TodoProps) => {
+const Todo = ({todo} :TodoProps) => {
     const ref = useRef<HTMLInputElement>(null);
     const [isEditing, setIsEditing] = useState(false);
-    const [editedTaskTitle, setEditedTaskTitle] = useState(todos.text);
-    const [editedDate, setEditedDate] = useState(todos.date);
+    const [editedTaskTitle, setEditedTaskTitle] = useState(todo.text);
+    const [editedDate, setEditedDate] = useState(todo.date);
 
     useEffect(() => {
         if(isEditing) {
@@ -24,16 +24,16 @@ const Todo = ({todos} :TodoProps) => {
     }
 
     const handleSave = async() => {
-        await editTodo(todos.id, editedTaskTitle)
+        await editTodo(todo.id, editedTaskTitle)
         setIsEditing(false);
     }
     
     const handleDelete = async() => {
-        await deleteTodo(todos.id);
+        await deleteTodo(todo.id);
     }
   return (
     <li 
-        key={todos.id}
+        key={todo.id}
         className='
             flex 
             justify-between 
@@ -83,8 +83,8 @@ const Todo = ({todos} :TodoProps) => {
                     </div>
                 ) : (
                     <div className='space-y-3'>
-                        <div>{todos.text}</div>
-                        <div>{todos.date}</div>
+                        <div>{todo.text}</div>
+                        <div>{todo.date}</div>
                     </div>
                 )}
                 <div>

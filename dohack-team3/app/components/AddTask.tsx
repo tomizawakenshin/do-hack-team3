@@ -7,7 +7,6 @@ import {v4 as uuidv4} from "uuid";
 const AddTask = () => {
 
     const [taskTitle, setTaskTitle] = useState("");
-    //const [date, setDate] = useState(new Date());
     const [date, setDate] = useState("");
     const handleSubmit = async (e : FormEvent) => {
 
@@ -37,7 +36,10 @@ const AddTask = () => {
             />
             <input
                 type='date'
-                onChange={(e) => setDate(new Date(e.target.value).toLocaleDateString("ja-JP"))}
+                onChange={(e) => {
+                    setDate(new Date(e.target.value).toLocaleDateString("ja-JP"))
+
+                }}
                 className='
                 shadow
                 appearance-none
