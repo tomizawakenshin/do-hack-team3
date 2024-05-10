@@ -7,7 +7,7 @@ interface TodoListProps {
 }
 const FallMeteor = ({todos} : TodoListProps) => {
   return (
-    <ul className='flex space-x-5 mx-5'>
+    <ul className='flex justify-between mx-5'>
         {todos.map((todo) => (
             <Meteor key={todo.id} todo={todo}/>
         ))}

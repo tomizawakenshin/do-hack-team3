@@ -18,7 +18,7 @@ export default async function Home() {
           min-h-screen 
           py-2
           bg-gray-200
-          p-28
+          p-20
           rounded-lg
           ">
         <h1 
@@ -51,21 +51,13 @@ export default async function Home() {
         </div>
       </main>
       <main className="
-        bg-slate-200
         rounded-lg
         w-1/2
       ">
-        <div className="h-2/5">
+        <div className="h-4/6 bg-gradient-to-b from-cyan-950">
           <FallMeteor todos = {todos}/>
         </div>
-        <div className="
-          bg-red-600
-          flex
-          items-end
-        ">
-          <img width={660} height={500} src="/image/town.png" alt=""/>
-
-        </div>
+        <img width={700} height={500} src="/image/town.png" alt=""/>
       </main>
     </div>
   );

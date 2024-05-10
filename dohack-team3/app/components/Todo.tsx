@@ -24,7 +24,7 @@ const Todo = ({todo} :TodoProps) => {
     }
 
     const handleSave = async() => {
-        await editTodo(todo.id, editedTaskTitle)
+        await editTodo(todo.id, editedTaskTitle, editedDate)
         setIsEditing(false);
     }
     
@@ -63,9 +63,7 @@ const Todo = ({todo} :TodoProps) => {
                             }
                         />
                         <input
-                            ref={ref}
                             type='date'
-                            onChange={(e) => setEditedDate(new Date(e.target.value).toLocaleDateString("ja-JP"))}
                             className='
                             shadow
                             appearance-none
@@ -79,6 +77,7 @@ const Todo = ({todo} :TodoProps) => {
                             focus:outline-none
                             '
                             value={editedDate}
+                            onChange={(e) => setEditedDate(new Date(e.target.value).toLocaleDateString("ja-JP"))}
                         />
                     </div>
                 ) : (
