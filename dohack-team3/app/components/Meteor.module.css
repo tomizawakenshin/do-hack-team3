@@ -1,0 +1,16 @@
+.Meteor {
+    position: relative;
+    padding-left: 20%;
+}
+
+.Meteor p {
+    position: absolute;
+    color: red;
+    top: 70%;
+    left: 35%;
+}
+
+.Meteor img {
+    scale: 100%;
+    mix-blend-mode: multiply;
+}
