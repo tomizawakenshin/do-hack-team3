@@ -1,0 +1,148 @@
+
+​
+Tomizawa kenshin
+​
+.restday-morethantwoweek {
+    position: relative;
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    border-radius: 7px;/*角の丸み*/
+    font-size: 18px;/*文字サイズ*/
+    color: green;
+    display: inline-block;
+}
+
+.kodou-morethantwoweek {
+    animation: kodou1 8.0s infinite;
+}
+@keyframes kodou1 {
+    0% {
+        transform: scale(1.10)
+    }
+    5% {
+        transform: scale(1)
+    }
+    95% {
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.10)
+    }
+}
+
+.restday-lessthantwoweek {
+    position: relative;
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    border-radius: 7px;/*角の丸み*/
+    font-size: 18px;/*文字サイズ*/
+    color: yellowgreen;
+    display: inline-block;
+}
+
+.kodou-lessthantwoweek {
+    animation: kodou2 8.0s infinite;
+}
+@keyframes kodou2 {
+    0% {
+        transform: scale(1.20)
+    }
+    5% {
+        transform: scale(1)
+    }
+    95% {
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.20)
+    }
+}
+
+.restday-lessthanoneweek {
+    position: relative;
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    border-radius: 7px;/*角の丸み*/
+    font-size: 18px;/*文字サイズ*/
+    color: rgba(207, 221, 17, 0.733);
+    display: inline-block;
+}
+
+.kodou-lessthanoneweek {
+    animation: kodou3 4.0s infinite;
+}
+@keyframes kodou3 {
+    0% {
+        transform: scale(1.50)
+    }
+    5% {
+        transform: scale(1)
+    }
+    95% {
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.50)
+    }
+}
+
+.restday-lessthanthreedays {
+    position: relative;
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    border-radius: 7px;/*角の丸み*/
+    font-size: 18px;/*文字サイズ*/
+    color: orange;
+    display: inline-block;
+}
+
+.kodou-lessthanthreedays {
+    animation: kodou4 2.0s infinite;
+}
+@keyframes kodou4 {
+    0% {
+        transform: scale(2.0)
+    }
+    5% {
+        transform: scale(1)
+    }
+    95% {
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(2.0)
+    }
+}
+
+.restday-lessthanoneday {
+    position: relative;
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    border-radius: 7px;/*角の丸み*/
+    font-size: 18px;/*文字サイズ*/
+    color: red;
+    display: inline-block;
+}
+
+.kodou-lessthanoneday {
+    animation: kodou5 1.0s infinite;
+}
+@keyframes kodou5 {
+    0% {
+        transform: scale(4.0)
+    }
+    5% {
+        transform: scale(1)
+    }
+    95% {
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(4.0)
+    }
+}

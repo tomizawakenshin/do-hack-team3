@@ -6,9 +6,11 @@ import TodoList from "./components/TodoList";
 import { getAllTodos } from "./api";
 import FallMeteor from "./components/FallMeteor";
 import styles from "./page.module.css";
+import {extinction} from "./components/Meteor"
 
 export default async function Home() {
   const todos = await getAllTodos();
+  
   return (
     <div className="flex">
       <main 
@@ -52,14 +54,14 @@ export default async function Home() {
         </div>
       </main>
       <main className="
-        rounded-lg
         w-1/2
       ">
-        <div className="h-4/6 bg-gradient-to-b from-cyan-950">
-          
-          <FallMeteor todos = {todos}/>
+        <div>
+            <div className="h-4/6 bg-gradient-to-b from-cyan-950">
+              <FallMeteor todos = {todos}/>
+            </div>
+            <img width={700} height={500} src="/image/town.png" alt=""/>
         </div>
-        <img width={700} height={500} src="/image/town.png" alt=""/>
       </main>
     </div>
   );
