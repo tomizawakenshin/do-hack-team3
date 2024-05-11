@@ -10,7 +10,7 @@ import styles from './Meteor.module.css'
 interface TodoProps {
     todo: Task;
 }
-
+export var extinction = false;
 const Meteor = ({todo} : TodoProps) => {
     const [InDanger, SetInDanger] = useState(true);
     const [year, month, day] = todo.date.split('/');
@@ -36,13 +36,16 @@ const Meteor = ({todo} : TodoProps) => {
             Play();
             SetInDanger(false);
         }
+
+        if(restDay == 0) {
+            extinction = true;
+        }
+        //console.log(extinction);
     })
 
   return (
     <MeteorLocation>
-        <div className=' rounded-lg space-y-2'>
-            {/* <div className='m-10 text-white'> */}
-            
+        <div className=' rounded-lg space-y-2'>            
                 {restDay > 2 ? (
                     <div className='border border-black rounded-lg'>
                         <div className='m-3 space-y-5'>
