@@ -13,6 +13,9 @@ const Todo = ({todo} :TodoProps) => {
     const [isEditing, setIsEditing] = useState(false);
     const [editedTaskTitle, setEditedTaskTitle] = useState(todo.text);
     const [editedDate, setEditedDate] = useState(todo.date);
+    const [year, month, day] = todo.date.split('/');
+    const date = new Date();
+    const restDay = Number(day) - date.getDate();
 
     useEffect(() => {
         if(isEditing) {
@@ -86,13 +89,20 @@ const Todo = ({todo} :TodoProps) => {
                         <div>{todo.date}</div>
                     </div>
                 )}
-                <div>
+                <div className='space-y-3'>
                     {isEditing ? (
                         <button className='text-blue-500 mr-3' onClick={handleSave}>save</button>
                     ) : (
                         <button className='text-green-500 mr-3' onClick={handleEdit}>edit</button>
                     )}
                     <button className='text-red-500' onClick={handleDelete}>Delete</button>
+                    <div>
+                        {restDay >= 0 ? (
+                            <div>残り{restDay}日で人類滅亡</div>
+                        ) : (
+                            <div>人類は滅亡しました</div>
+                        )}
+                    </div> 
                 </div>
     </li>
   )
