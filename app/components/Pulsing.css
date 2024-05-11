@@ -1,0 +1,144 @@
+.restday-morethantwoweek {
+	position: relative;
+	font-weight: bold;
+	padding: 5px 15px;
+	margin: 0px 5px;
+	border-radius: 7px;/*角の丸み*/
+	font-size: 18px;/*文字サイズ*/
+    color: green;
+	display: inline-block;
+}
+
+.kodou-morethantwoweek {
+	animation: kodou 2.0s infinite;
+}
+@keyframes kodou {
+	0% {
+		transform: scale(1.10)
+	}
+	5% {
+		transform: scale(1)
+	}
+	95% {
+		transform: scale(1)
+	}
+	100% {
+		-webkit-transform: scale(1.10)
+	}
+}
+
+.restday-lessthantwoweek {
+	position: relative;
+	font-weight: bold;
+	padding: 5px 15px;
+	margin: 0px 5px;
+	border-radius: 7px;/*角の丸み*/
+	font-size: 18px;/*文字サイズ*/
+    color: yellowgreen;
+	display: inline-block;
+}
+
+.kodou-lessthantwoweek {
+	animation: kodou 1.5s infinite;
+}
+@keyframes kodou {
+	0% {
+		transform: scale(1.20)
+	}
+	5% {
+		transform: scale(1)
+	}
+	95% {
+		transform: scale(1)
+	}
+	100% {
+		-webkit-transform: scale(1.20)
+	}
+}
+
+.restday-lessthanoneweek {
+	position: relative;
+	font-weight: bold;
+	padding: 5px 15px;
+	margin: 0px 5px;
+	border-radius: 7px;/*角の丸み*/
+	font-size: 18px;/*文字サイズ*/
+    color: yellow;
+	display: inline-block;
+}
+
+.kodou-lessthanoneweek {
+	animation: kodou 1.0s infinite;
+}
+@keyframes kodou {
+	0% {
+		transform: scale(1.30)
+	}
+	5% {
+		transform: scale(1)
+	}
+	95% {
+		transform: scale(1)
+	}
+	100% {
+		-webkit-transform: scale(1.30)
+	}
+}
+
+.restday-lessthanthreedays {
+	position: relative;
+	font-weight: bold;
+	padding: 5px 15px;
+	margin: 0px 5px;
+	border-radius: 7px;/*角の丸み*/
+	font-size: 18px;/*文字サイズ*/
+    color: orange;
+	display: inline-block;
+}
+
+.kodou-lessthanthreedays {
+	animation: kodou 0.5s infinite;
+}
+@keyframes kodou {
+	0% {
+		transform: scale(1.40)
+	}
+	5% {
+		transform: scale(1)
+	}
+	95% {
+		transform: scale(1)
+	}
+	100% {
+		-webkit-transform: scale(1.40)
+	}
+}
+
+.restday-lessthanoneday {
+	position: relative;
+	font-weight: bold;
+	padding: 5px 15px;
+	margin: 0px 5px;
+	border-radius: 7px;/*角の丸み*/
+	font-size: 18px;/*文字サイズ*/
+    color: red;
+	display: inline-block;
+}
+
+.kodou-lessthanoneday {
+	animation: kodou 0.2s infinite;
+}
+@keyframes kodou {
+	0% {
+		transform: scale(1.50)
+	}
+	5% {
+		transform: scale(1)
+	}
+	95% {
+		transform: scale(1)
+	}
+	100% {
+		-webkit-transform: scale(1.50)
+	}
+}
