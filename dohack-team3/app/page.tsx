@@ -1,6 +1,6 @@
 //"use client";
 
-import { useEffect } from "react"
+// import { useEffect } from "react"
 import AddTask from "./components/AddTask";
 import TodoList from "./components/TodoList";
 import { getAllTodos } from "./api";
@@ -31,7 +31,7 @@ export default async function Home() {
             text-gray-700
             pl-28
           ">
-            Nextjs 13 Todo App
+            隕石ToDo
         </h1>
         <div 
           className="
